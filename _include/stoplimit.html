@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>&lt;no title&gt; &mdash; TWS API 9.72 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '9.72',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="TWS API 9.72 documentation" href="../index.html" />
+    <link rel="stylesheet" media="screen" type="text/css" href="_static/menu.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="_static/style-overrides.css">
+    
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+
+<!-- TOP NAVIGATION -->
+<header class="noprint">
+    <div class="navbartop megamenu navbartop-inverse navbartop-fixed-top hidden-xs">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" target="_self" class="navbar-brand"><img src="_static/nav_iblogo.png" alt="Interactive Brokers"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                <!-- SEARCH -->
+                <li class="hidden-sm">
+                    <div class="search_box">
+                      <form action="../search.html" method="get" class="search_form">
+                          <input type="text" style="width:189px;" placeholder="SEARCH" name="q" class="s swap_value searchinput" id="searchField">
+                          <input type="submit" style="outline:none;" class="searchsubmit" id="submit" value="">
+                          <input type="hidden" name="check_keywords" value="yes" />
+                          <input type="hidden" name="area" value="default" />
+                      </form>
+                    </div>
+                </li>
+                <!-- SEARCH SMALL -->
+                <li class="hidden-xs hidden-md hidden-lg">
+                    <a href="search.html" target="_self">Search <img src="_static/nav_icon_search_black.png" alt="" border="0" style="margin:-6px 0px 0px 5px;" /></a>
+                </li>
+                <!-- LOG IN -->
+                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle log-in">Log In <b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                    <div class="megamenu-content">
+                        <div class="row">
+                            <ul class="col-sm-4 list-unstyled">
+                            <li class="hidden-xs"><p>Trader Workstation</p></li>
+                            <li><a href="https://www.interactivebrokers.com/en/index.php?f=556" target="_self" title="This is the most recent stable version of TWS, and it that contains all of the most recently tested and approved tools and features. - TWS Latest v9531 published Oct 14 2015">TWS Latest</a></li>
+                            <li><a href="https://www.interactivebrokers.com/en/index.php?f=553" target="_self" title="This time-tested version of TWS changes less frequently than the Latest version and offers maximum stability, but does not include all of the newest features. - TWS Production v9395 published May 7 2015">TWS</a></li>
+                            <li><a href="https://www.interactivebrokers.com/en/index.php?f=554" target="_self" title="TWS Beta allows you to trade your live IB account. It includes all of the newest TWS features, but is still being tested and is likely to change before it is promoted to Latest. - TWS Beta v9540 published Oct 14 2015">TWS Beta</a></li>
+                            </ul>
+                            <ul class="col-sm-4 list-unstyled">
+                            <li class="hidden-xs"><p>Account Management</p></li>
+                            <li><a href="https://gdcdyn.interactivebrokers.com/sso/Login" target="_blank" title="Configure, manage and monitor all facets of your IB account including research and market data subscriptions, reporting, funding, trading and more.">Account Management</a></li>
+                            <li><a href="https://gdcdyn.interactivebrokers.com/sso/Login?c=t" target="_blank" title="Log into your account to pick up where you left off on your IB application.">Complete an Application</a></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <ul class="col-sm-4 list-unstyled">
+                            <li class="hidden-xs"><p>WebTrader</p></li>
+                            <li><a href="https://gre.wgw.interactivebrokers.com/webtrader/servlet/login" target="_blank" title="Our HTML-based trading platform with a simpler trading interface than TWS, but still feature-rich with key advanced trading tools.">WebTrader</a></li>
+                            <li><a href="https://ch.wgw.interactivebrokers.com/webtraderbeta/servlet/login" target="_blank" title="WebTrader Beta allows you to trade your live IB account. It includes all of the newest WebTrader features but is still being tested and is subject to change before it is promoted.">WebTrader Beta</a></li>
+                            </ul>
+                            <ul class="col-sm-4 list-unstyled">
+                            <li class="hidden-xs"><p>API Access</p></li>
+                            <li><a href="https://www.interactivebrokers.com/java/classes/ibg.latest.jnlp" target="_self" title="Run your API through the IB Gateway as an alternative to running TWS. This version runs the same code and has the same features as TWS. - IB Gateway v9395 published May 7 2015">IB Gateway</a></li>
+                            <li><a href="https://www.interactivebrokers.com/java/classes/ibg.beta.jnlp" target="_self"  title="Run your API through the IB Gateway Beta as an alternative to running TWS Beta. This version runs the same code. has the same features and is subject to the same testing and changes as the TWS Beta. - IB Gateway Beta v9540 published Oct 14 2015">IB Gateway Beta</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END TOP NAVIGATION -->
+    <!-- BOTTOM NAVIGATION -->
+    <div class="navbar megamenu navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header hidden-lg hidden-md hidden-sm">
+                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="https://www.interactivebrokers.com/en/home.php" class="navbar-brand"><img src="_static/nav_iblogo.png" alt="Interactive Brokers"></a>
+            </div>
+            <div id="navbar-collapse-1" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                <!-- SITES -->
+                <!--<ul>
+<li class="toctree-l1"><a class="reference internal" href="../connectionandserver.html">Connection and Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../marketdata.html">Market Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../marketdata.html#requesting">Requesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marketdata.html#receiving">Receiving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marketdata.html#contract-types">Contract Types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../orders.html">Orders</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../orders.html#placing">Placing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orders.html#order-types">Order Types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../accountandportfolio.html">Account and Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executions.html">Executions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contractdetails.html">Contract Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../marketdepth.html">Market Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../newsbulletins.html">News Bulletins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../financialadvisors.html">Financial Advisors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../marketscanners.html">Market Scanners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../historicaldata.html">Historical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../realtimebars.html">Realtime Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentaldata.html">Fundamental Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../displaygroups.html">Display Groups</a></li>
+</ul>
+-->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class='dropdown'>Selected programming language</li>
+                    <li class='dropdown'><a href='#' data-toggle='dropdown' class='dropdown-toggle'>JAVA</a></li>
+                    <li class='dropdown'><a href='#' data-toggle='dropdown' class='dropdown-toggle'>C#</a></li>
+                    <li class='dropdown'><a href='#' data-toggle='dropdown' class='dropdown-toggle'>C++</a></li>
+                    <li class='dropdown'><a href='#' data-toggle='dropdown' class='dropdown-toggle'>ACTIVEX</a></li>
+                    <li class='dropdown'><a href='#' data-toggle='dropdown' class='dropdown-toggle'>EXCEL DDE</a></li>
+                    <!-- SEARCH MOBILE -->
+                    <li class="hidden-lg hidden-md hidden-sm"><a href="search.html" target="_blank">Search</a></li>
+                    <!-- LOGIN MOBILE -->
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- END BOTTOM NAVIGATION -->
+</header>
+
+
+
+
+  </head>
+  <body role="document">
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav hidden-print hidden-xs hidden-sm" role="complementary">
+  <div class="hidden-print hidden-xs hidden-sm" role="navigation" aria-label="main navigation">
+    
+      
+      
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../connectionandserver.html">Connection and Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../marketdata.html">Market Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orders.html">Orders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accountandportfolio.html">Account and Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executions.html">Executions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contractdetails.html">Contract Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../marketdepth.html">Market Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../newsbulletins.html">News Bulletins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../financialadvisors.html">Financial Advisors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../marketscanners.html">Market Scanners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../historicaldata.html">Historical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../realtimebars.html">Realtime Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentaldata.html">Fundamental Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../displaygroups.html">Display Groups</a></li>
+</ul>
+
+      
+    
+  </div>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="csharp-code-example container" id="stoplimit-csharp">
+<p><strong>csharp</strong></p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Order</span> <span class="n">order</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Order</span><span class="p">();</span>
+<span class="n">order</span><span class="p">.</span><span class="n">Action</span> <span class="p">=</span> <span class="n">action</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">OrderType</span> <span class="p">=</span> <span class="s">&quot;STP LMT&quot;</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">TotalQuantity</span> <span class="p">=</span> <span class="n">quantity</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">LmtPrice</span> <span class="p">=</span> <span class="n">limitPrice</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">AuxPrice</span> <span class="p">=</span> <span class="n">stopPrice</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="java-code-example container" id="stoplimit-java">
+<p><strong>java</strong></p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">Order</span> <span class="n">order</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Order</span><span class="o">();</span>
+<span class="n">order</span><span class="o">.</span><span class="na">Action</span> <span class="o">=</span> <span class="n">action</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">OrderType</span> <span class="o">=</span> <span class="s">&quot;STP LMT&quot;</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">TotalQuantity</span> <span class="o">=</span> <span class="n">quantity</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">LmtPrice</span> <span class="o">=</span> <span class="n">limitPrice</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">AuxPrice</span> <span class="o">=</span> <span class="n">stopPrice</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Brandon.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
